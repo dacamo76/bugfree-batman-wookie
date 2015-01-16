@@ -8,5 +8,6 @@
   :plugins [[lein-ring "0.8.13"]]
   :ring {:handler bugfree-batman-wookie.core.handler/app}
   :profiles
-  {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]
+  {:uberjar {:aot :all}
+   :dev {:dependencies [[javax.servlet/servlet-api "2.5"]
                         [ring-mock "0.1.5"]]}})
