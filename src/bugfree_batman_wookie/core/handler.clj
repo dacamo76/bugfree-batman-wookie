@@ -3,9 +3,9 @@
             [compojure.route :as route]
             [ring.middleware.defaults :refer [wrap-defaults site-defaults]]))
 
-(def count (atom 0))
+(def counter (atom 0))
 
-(defn increment [] (swap! count inc))
+(defn increment [] (swap! counter inc))
 
 (defroutes app-routes
   (GET "/" [] "Hello World")
