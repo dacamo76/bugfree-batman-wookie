@@ -14,7 +14,7 @@
 
 (defroutes app-routes
   (GET "/" [] "Hello World")
-  (GET "/count" [] (do (println conn) (str (redis-increment))))
+  (GET "/count" [] (do (println conn) (str (increment))))
 ;  (GET "/count" [] (str (increment)))
   (route/not-found "Not Found"))
 
